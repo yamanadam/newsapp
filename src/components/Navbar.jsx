@@ -1,8 +1,11 @@
 import React from "react";
 
-const Navbar = () => {
+const Navbar = ({ setCategory }) => {
   return (
-    <nav className="navbar navbar-expand-lg bg-body-tertiary p-3 ">
+    <nav
+      className="navbar navbar-expand-lg bg-body-tertiary p-3 mb-5"
+      data-bs-theme="dark"
+    >
       <div className="container-fluid">
         <a className="navbar-brand" href="#">
           <span className="badge bg-danger">NEWS</span>
@@ -21,29 +24,45 @@ const Navbar = () => {
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav">
             <li className="nav-item">
-              <a className="nav-link   " aria-current="page" href="#">
+              <div
+                className="nav-link  btn btn-secondary "
+                aria-current="page"
+                onClick={() => setCategory("science")}
+              >
                 Science
-              </a>
+              </div>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">
+              <div
+                className="nav-link btn btn-secondary"
+                onClick={() => setCategory("sports")}
+              >
                 Sports
-              </a>
+              </div>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">
+              <div
+                className="nav-link btn btn-secondary"
+                onClick={() => setCategory("technology")}
+              >
                 Technology
-              </a>
+              </div>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">
+              <div
+                className="nav-link btn btn-secondary"
+                onClick={() => setCategory("business")}
+              >
                 Business
-              </a>
+              </div>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">
+              <div
+                className="nav-link btn btn-secondary"
+                onClick={() => setCategory("health")}
+              >
                 Health
-              </a>
+              </div>
             </li>
           </ul>
         </div>
